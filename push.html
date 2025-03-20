@@ -11,9 +11,6 @@
 
 			// WHIP Publish URL
 			const publishURL = "https://customer-igynxd2rwhmuoxw8.cloudflarestream.com/2df931e1bd3fe2a102d418d9a27e1f4fk9078ce9a70072d1a86d7173fd3c82bdc/webRTC/publish";
-
-			// WHEP Playback URL
-			const playbackURL = "https://customer-igynxd2rwhmuoxw8.cloudflarestream.com/9078ce9a70072d1a86d7173fd3c82bdc/webRTC/play";
 		</script>
 
 		<!-- This adapter normalizes cross-browser differences in WebRTC APIs. Currently necessary in order to support Firefox. -->
@@ -34,16 +31,6 @@
 			// This element will show your local webcam view
 			import WHIPClient from "./WHIPClient.js";
 			self.whipClient = new WHIPClient(publishURL, document.getElementById("input-video"));
-		</script>
-
-		<h4>Playing video using WHEP</h4>
-		<h5>(remote content)</h5>
-		<video id="remote-video" controls autoplay muted></video>
-
-		<script type="module">
-			// This element will show the playback from Stream
-			import WHEPClient from "./WHEPClient.js";
-			self.whepClient = new WHEPClient(playbackURL, document.getElementById("remote-video"));
 		</script>
 	</body>
 </html>
