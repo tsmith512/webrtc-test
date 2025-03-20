@@ -10,7 +10,7 @@
 			 */
 
 			// WHEP Playback URL
-			const playbackURL = "https://customer-igynxd2rwhmuoxw8.cloudflarestream.com/9078ce9a70072d1a86d7173fd3c82bdc/webRTC/play";
+			let playbackURL = "https://customer-igynxd2rwhmuoxw8.cloudflarestream.com/9078ce9a70072d1a86d7173fd3c82bdc/webRTC/play";
 		</script>
 
 		<!-- This adapter normalizes cross-browser differences in WebRTC APIs. Currently necessary in order to support Firefox. -->
@@ -21,10 +21,10 @@
 			referrerpolicy="no-referrer"
 		></script>
 		<script>
-			window.isSigned = confirm("Signed URL Required?");
-			if (window.isSigned) {
-				window.token = prompt("Enter signed URL token");
-				const playbackURL = `https://customer-igynxd2rwhmuoxw8.cloudflarestream.com/${token}/webRTC/play`;
+			isSigned = confirm("Signed URL Required?");
+			if (isSigned) {
+				token = prompt("Enter signed URL token");
+				playbackURL = `https://customer-igynxd2rwhmuoxw8.cloudflarestream.com/${token}/webRTC/play`;
 			}
 		</script>
 		<link rel="stylesheet" href="style.css" />
